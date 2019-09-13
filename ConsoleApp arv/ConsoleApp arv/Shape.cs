@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp_arv
 {
-    class Shape
+    abstract class Shape
     {
         protected int width, height;
 
@@ -13,5 +13,10 @@ namespace ConsoleApp_arv
             this.width = width;
             this.height = height;
         }
+
+        public abstract int Area();
+
+        public abstract int Omkrets();
+
     }
 }

@@ -10,8 +10,7 @@ namespace ConsoleApp_arv
 
             string form;
             int Höjd, djup;
-            Triangel triangel;
-            Rektangel rektangel;
+            Shape shape;
 
 
 
@@ -26,17 +25,14 @@ namespace ConsoleApp_arv
 
             if (form == "Rektangel")
             {
-                rektangel = new Rektangel(Höjd, djup);
-                Console.WriteLine("Din rekrangels area är: " + rektangel.Area());
-                Console.WriteLine("Din rekrangels omkrets är: " + rektangel.Omkrets());
+                shape = new Rektangel(Höjd, djup);
             }
-            else if (form == "Triangel")
+            else //if (form == "Triangel")
             {
-                triangel = new Triangel(djup, Höjd);
-                Console.WriteLine("Din Triangel area är: " + triangel.Area());
-                Console.WriteLine("Din rektangel Omkrets är: " + triangel.Omkrets());
+                shape = new Triangel(djup, Höjd);
             }
-
+            Console.WriteLine("Din area är: " + shape.Area());
+            Console.WriteLine("Din Omkrets är: " + shape.Omkrets());
             Console.ReadLine();
         }
     }

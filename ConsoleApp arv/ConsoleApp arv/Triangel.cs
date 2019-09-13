@@ -11,12 +11,12 @@ namespace ConsoleApp_arv
 
         }
 
-        public int Area()
+        public override int Area()
         {
             return (width * height) / 2;
         }
 
-        public int Omkrets()
+        public override int Omkrets()
         {
             int hypotenusa = (int)Math.Sqrt(Math.Pow(width, 2) + Math.Pow(height, 2));
             return (width + height + hypotenusa);

@@ -11,12 +11,12 @@ namespace ConsoleApp_arv
 
         }
 
-        public int Area()
+        public override int Area()
         {
             return (width * height);
         }
 
-        public int Omkrets()
+        public override int Omkrets()
         {
             return (width * 2) + (height * 2);
         }
