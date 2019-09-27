@@ -4,19 +4,21 @@ using System.Text;
 
 namespace ConsoleApp_arv
 {
-    class Triangel: Shape
+    class Triangel: IShape
     {
-        public Triangel(int width, int height) : base(width, height)
+        int width, height;
+        public Triangel(int width, int height)
         {
-
+            this.width = width;
+            this.height = height;
         }
 
-        public override int Area()
+        public int Area()
         {
             return (width * height) / 2;
         }
 
-        public override int Omkrets()
+        public int Omkrets()
         {
             int hypotenusa = (int)Math.Sqrt(Math.Pow(width, 2) + Math.Pow(height, 2));
             return (width + height + hypotenusa);

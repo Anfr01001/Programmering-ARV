@@ -4,19 +4,21 @@ using System.Text;
 
 namespace ConsoleApp_arv
 {
-    class Rektangel: Shape
+    class Rektangel: IShape
     {
-        public Rektangel(int width, int height) : base(width, height)
+        int width, height;
+        public Rektangel(int width, int height)
         {
-
+            this.width = width;
+            this.height = height;
         }
 
-        public override int Area()
+        public int Area()
         {
             return (width * height);
         }
 
-        public override int Omkrets()
+        public int Omkrets()
         {
             return (width * 2) + (height * 2);
         }
